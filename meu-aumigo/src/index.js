@@ -6,6 +6,8 @@ import Header from './componentes/Header';
 import reportWebVitals from './reportWebVitals';
 import RodaPe from './componentes/RodaPe';
 
+
+
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
