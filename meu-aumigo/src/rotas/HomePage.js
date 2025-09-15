@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Cardapio from "./componentes/Cardapio";
+import Cardapio from "../componentes/Cardapio/index.js"
 import { useEffect } from "react";
 import axios from "axios";
 
@@ -17,7 +17,7 @@ const AppContainer = styled.div`
 
 function HomePage() {
       useEffect(() => {
-    axios.get("http://localhost:8000/cachorros")
+    axios.get("http://localhost:8000/animais")
       .then(res => {
         console.log("API respondeu:", res.data);
       })
@@ -27,9 +27,7 @@ function HomePage() {
   }, []);
     return(
         <AppContainer>
-            <h1>Testando conexão React + API</h1>
             <Cardapio/>
-
         </AppContainer>
 
 

@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createGlobalStyle } from "styled-components"
-import HomePage from './HomePage';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import HomePage from './rotas/HomePage';
 import Header from './componentes/Header';
 import reportWebVitals from './reportWebVitals';
 import RodaPe from './componentes/RodaPe';
+import PerfilCompleto from './rotas/PerfilCompleto';
 
 
 
@@ -40,9 +42,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyle />
+    <BrowserRouter>
     <Header />
-    <HomePage />
+    <Routes>
+    <Route path='/' element={<HomePage />}/>
+    <Route path='/PerfilAmigo' element={<PerfilCompleto />} />
+    </Routes>
     <RodaPe />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
