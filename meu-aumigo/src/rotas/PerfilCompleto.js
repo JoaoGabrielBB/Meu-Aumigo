@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Perfil from "../componentes/Perfil";
 
 
 
@@ -15,7 +16,7 @@ const AppContainer = styled.div`
 function PerfilCompleto() {
     return(
         <AppContainer>
-
+            <Perfil/>
             
         </AppContainer>
 

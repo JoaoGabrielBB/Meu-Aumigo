@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Logo from "../Logo";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.header` 
     background-color: #FFFF00;
@@ -17,9 +18,14 @@ const Titulo = styled.h2`
 
 
 function Header(){
+
+
     return(
     <HeaderContainer>
-        <Logo />
+        <Link to={`/`}>
+                <Logo/>
+        </Link>
+
         <Titulo>ADOTE UM AMIGO!</Titulo>
     </HeaderContainer>
     );
