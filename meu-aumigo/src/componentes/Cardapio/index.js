@@ -16,7 +16,7 @@ const OpcoesCachorros = styled.li`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    cursor: pointer;
+  
 
 `
 
@@ -36,8 +36,9 @@ function Cardapio(){
         <OpcaoCardapio>
             <OpcoesCachorros>
                 {pets.map((pet, index) =>                
-                 <CardCachoro key={index}
-
+                 <CardCachoro 
+                    key={index}
+                    id={pet._id}
                     nome={pet.nome}
                     foto={pet.foto ? `http://localhost:8000${pet.foto}` : undefined} alt={pet.nome}
                     

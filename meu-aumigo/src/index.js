@@ -46,7 +46,7 @@ root.render(
     <Header />
     <Routes>
     <Route path='/' element={<HomePage />}/>
-    <Route path='/PerfilAmigo' element={<PerfilCompleto />} />
+    <Route path='/amigo/:id' element={<PerfilCompleto />} />
     </Routes>
     <RodaPe />
     </BrowserRouter>

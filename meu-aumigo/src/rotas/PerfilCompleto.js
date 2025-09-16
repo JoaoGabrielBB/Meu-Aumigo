@@ -14,7 +14,10 @@ const AppContainer = styled.div`
 
 function PerfilCompleto() {
     return(
-        <AppContainer></AppContainer>
+        <AppContainer>
+
+            
+        </AppContainer>
 
 
 

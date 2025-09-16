@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Card = styled.div`
   width: 132px;
@@ -8,6 +9,7 @@ const Card = styled.div`
   border: 2px solid #000;
   border-radius: 8px;
   margin: 1em 1em 0 0;
+  cursor: pointer;
 `;
 
 const FotoCachoro = styled.img`
@@ -28,9 +30,16 @@ const Overlay = styled.div`
   font-size: 1rem;
 `;
 
-function CardCachoro({ nome, foto }) {
+function CardCachoro({ nome, foto, id }) {
+  const navigate = useNavigate();
+
+  const irParaPerfil = () => {
+    navigate(`/amigo/${id}`)
+  };
+
+
   return (
-    <Card>
+    <Card onClick={irParaPerfil}>
       <FotoCachoro src={foto} alt={nome} />
       <Overlay>{nome}</Overlay>
     </Card>
